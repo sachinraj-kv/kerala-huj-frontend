@@ -35,6 +35,7 @@ const Login = () => {
 
       if (login.data.success) {
         console.log("Login successful");
+        setIsAuthenticated(true)
         navigate("/");
       } else {
         alert("Invalid credentials");
@@ -112,4 +113,5 @@ const Login = () => {
 };
 
 export default Login;
+
 
