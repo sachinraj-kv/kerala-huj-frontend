@@ -2,7 +2,6 @@ import axios from "axios";
 
 
 export const api = axios.create({
-    baseURL : "https://kerala-huj-backend.onrender.com",
+    baseURL : "http://localhost:3000",
       withCredentials: true,
-
 })

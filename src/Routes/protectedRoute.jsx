@@ -1,16 +1,11 @@
-import React from "react";
+import { AuthContext } from "@/context/AuthContext";
+import { useContext } from "react";
 import { Navigate } from "react-router-dom";
 
 const ProtectedRoute = ({ children }) => {
+  const { isAuthenticated } = useContext(AuthContext);
 
-  const getCookie = (name) => {
-    const match = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
-    return match ? decodeURIComponent(match[2]) : null;
-  };
-
-  const token = getCookie("token"); 
-
-  if (!token) {
+  if (!isAuthenticated) {
     return <Navigate to="/login" replace />;
   }
 

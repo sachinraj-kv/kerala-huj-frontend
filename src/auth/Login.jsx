@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -13,8 +13,13 @@ import { Label } from "@/components/ui/label";
 import { api } from "@/api/api";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { AuthContext } from "@/context/AuthContext";
+
 
 const Login = () => {
+
+  const { setIsAuthenticated } = useContext(AuthContext);
+
   const {
     register,
     handleSubmit,
@@ -30,6 +35,9 @@ const Login = () => {
 
       if (login.data.success) {
         console.log("Login successful");
+        setIsAuthenticated(true);
+        console.log("res",login.data.message);
+        
         navigate("/");
       } else {
         alert("Invalid credentials");
