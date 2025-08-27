@@ -6,17 +6,17 @@ import Details from "@/pages/Details";
 import Reports from "@/pages/Reports";
 import Login from "@/auth/Login";
 import StateReciptPdf from "@/recipt/StateReciptPdf";
-import ProtectedRoute from "./ProtectedRoute";
 import ReportTable from "@/pages/ReportTable";
+import ProtectedRoute from "./protectedRoute";
 
 const AppRoutes = () => {
   return (
     <div>
       <Routes>
-        {/* Public route */}
+       
         <Route path="/login" element={<Login />} />
 
-        {/* Protected routes */}
+        
         <Route
           path="/"
           element={
