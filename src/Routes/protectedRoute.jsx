@@ -9,6 +9,8 @@ const ProtectedRoute = ({ children }) => {
   };
 
   const token = getCookie("token"); 
+  
+  console.log("token",token);
 
   if (!token) {
     return <Navigate to="/login" replace />;
@@ -18,3 +20,4 @@ const ProtectedRoute = ({ children }) => {
 };
 
 export default ProtectedRoute;
+
