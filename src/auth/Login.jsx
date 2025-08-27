@@ -30,6 +30,7 @@ const Login = () => {
 
       if (login.data.success) {
         console.log("Login successful");
+        console.log("res",login.data.message);
         navigate("/");
       } else {
         alert("Invalid credentials");
@@ -107,3 +108,4 @@ const Login = () => {
 };
 
 export default Login;
+
