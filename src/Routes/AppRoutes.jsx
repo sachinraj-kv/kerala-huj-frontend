@@ -6,7 +6,7 @@ import Details from "@/pages/Details";
 import Reports from "@/pages/Reports";
 import Login from "@/auth/Login";
 import StateReciptPdf from "@/recipt/StateReciptPdf";
-import ProtectedRoute from "./ProtectedRoute";
+import ProtectedRoute from "./protectedRoute";
 import ReportTable from "@/pages/ReportTable";
 
 const AppRoutes = () => {
@@ -64,3 +64,4 @@ const AppRoutes = () => {
 };
 
 export default AppRoutes;
+
